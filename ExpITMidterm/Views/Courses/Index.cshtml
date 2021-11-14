@@ -1,0 +1,19 @@
+﻿
+
+      ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Courses</h2>
+
+@foreach (var course in Model)
+
+{
+    <p>@course.Id</p>
+    <p>@course.CourseName</p>
+    <p>@course.CourseDescription</p>
+    <p>@course.CourseTutor</p>
+    <p>@course.CourseRating</p>
+
+}
+
