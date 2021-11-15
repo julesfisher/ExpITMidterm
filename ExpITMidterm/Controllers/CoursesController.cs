@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExpITMidterm.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,30 +12,30 @@ namespace ExpITMidterm.Controllers
         // GET: Courses List
         public ActionResult Index()
         {
-            var _context = new StudentData();
+            var _context = new StudentContext();
             var courses = _context.Courses.ToList();
             return View(courses);
         }
 
-        // GET: Courses List
+        // GET: Add Course
         public ActionResult AddCourse()
         {
             return View();
         }
 
-        // GET: Courses List
+        // GET: Edit Course
         public ActionResult EditCourse()
         {
             return View();
         }
 
-        // GET: Courses List
+        // GET: Update Course
         public ActionResult UpdateCourse()
         {
             return View();
         }
 
-        // GET: Courses List
+        // GET: Delete Course
         public ActionResult DeleteCourse()
         {
             return View();

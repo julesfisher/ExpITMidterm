@@ -1,5 +1,5 @@
 ﻿
-
+@model  IEnumerable<ExpITMidterm.Models.Courses>
       ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -9,11 +9,12 @@
 @foreach (var course in Model)
 
 {
-    <p>@course.Id</p>
-    <p>@course.CourseName</p>
+<div class="panel-body">
+    @*<p>@course.Id</p>*@
+    <h2>@course.CourseName</h2>
     <p>@course.CourseDescription</p>
-    <p>@course.CourseTutor</p>
+    <h3>@course.TutorName</h3>
     <p>@course.CourseRating</p>
-
+</div>
 }
 
