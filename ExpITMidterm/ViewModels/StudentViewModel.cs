@@ -11,6 +11,6 @@ namespace ExpITMidterm.ViewModels
     {
         public Students Student { get; set; }
         public List<Courses> CourseList { get; set; }
-        public List<SelectList> CourseStatuses { get; set; }
+        public List<CourseStatus> CourseStatuses { get; set; }
     }
 }

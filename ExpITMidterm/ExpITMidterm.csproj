@@ -62,6 +62,9 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System-Web-Helpers.dll.1.0.0\lib\Net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -78,10 +81,6 @@
     <Reference Include="System.Net.Http">
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
-    </Reference>
-    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -137,8 +136,18 @@
     <Compile Include="Migrations\202111141327538_StudentData.designer.cs">
       <DependentUpon>202111141327538_StudentData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111212320469_AddedDateOfBirth.cs" />
+    <Compile Include="Migrations\202111212320469_AddedDateOfBirth.designer.cs">
+      <DependentUpon>202111212320469_AddedDateOfBirth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111212338313_dachang.cs" />
+    <Compile Include="Migrations\202111212338313_dachang.designer.cs">
+      <DependentUpon>202111212338313_dachang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\18YearsOrOlder.cs" />
     <Compile Include="Models\Courses.cs" />
+    <Compile Include="Models\CourseStatus.cs" />
     <Compile Include="Models\StudentContext.cs" />
     <Compile Include="Models\Students.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -210,6 +219,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202111141327538_StudentData.resx">
       <DependentUpon>202111141327538_StudentData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111212320469_AddedDateOfBirth.resx">
+      <DependentUpon>202111212320469_AddedDateOfBirth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111212338313_dachang.resx">
+      <DependentUpon>202111212338313_dachang.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

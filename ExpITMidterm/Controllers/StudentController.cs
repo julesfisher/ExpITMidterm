@@ -16,13 +16,13 @@ namespace ExpITMidterm.Controllers
 
         private StudentContext db = new StudentContext();
 
-        
+
         public ActionResult Index()
         {
-            return View(db.Students.ToList());
+        return View(db.Students.ToList());
         }
 
-        
+
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -39,21 +39,29 @@ namespace ExpITMidterm.Controllers
 
 
         [HttpGet]
-        
+
         public ActionResult Create()
         {
-            var model = new StudentViewModel()
-            {
-                Student = new Students(),
-                CourseList = db.Courses.ToList()
-            };
+            var model = new StudentViewModel();
 
-            return View();
+            var statuses = new List<CourseStatus>();
+
+            statuses.Add(new CourseStatus() { Id = 1, Name = "InProgress" });
+            statuses.Add(new CourseStatus() { Id = 2, Name = "Completed" });
+
+            model.CourseList = db.Courses.ToList();
+            model.Student = new Students();
+            model.CourseStatuses = statuses;
+
+            return View(model);
+
+
+
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create ( StudentViewModel students)
+        public ActionResult Create(StudentViewModel students)
         {
             if (ModelState.IsValid)
             {
@@ -84,7 +92,7 @@ namespace ExpITMidterm.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit ( StudentViewModel students)
+        public ActionResult Edit(StudentViewModel students)
         {
             if (ModelState.IsValid)
             {
@@ -135,3 +143,8 @@ namespace ExpITMidterm.Controllers
 
     }
 }
+
+
+    
+
+    

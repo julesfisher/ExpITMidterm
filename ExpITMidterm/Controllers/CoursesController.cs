@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace ExpITMidterm.Controllers
 {
+
     public class CoursesController : Controller
     {
         private StudentContext db = new StudentContext();
@@ -35,10 +36,10 @@ namespace ExpITMidterm.Controllers
         }
 
       
-        public ActionResult Create()
+       public ActionResult Create()
         {
             //var model = new Courses(){};
-            return View();
+           return View();
         }
 
        
